@@ -7,7 +7,10 @@
 3. Fkt. Grundrechenarten :: 
 4. Ausgabe in Konsole :: check
 */
-let a,b,c, rechenart
+
+
+
+let a, b, c, rechenart
 // a=6
 // b=2
 // rechenart = "mal"
@@ -17,26 +20,26 @@ let a,b,c, rechenart
     
     a = parseInt(prompt("Bitte die erste Zahl eingeben:"))
     b = parseInt(prompt("Bitte die zweite Zahl eingeben:"))
-    rechenart = prompt("Bitte Rechenart eingeben (plus/minus/mal/geteilt)")
+    rechenart = prompt("Bitte Rechenart eingeben (+  -  *  /)")
 
 
 
 //Modul 2: Auswahl Rechenart 
 //function auswahl(rechenart, a, b){
     switch (rechenart) {
-        case rechenart = "plus":
+        case rechenart = "+":
             ausgabe (addition(a,b));
             break;
 
-        case rechenart = "minus":
+        case rechenart = "-":
             ausgabe (subtraktion(a,b));
-        break;
+            break;
 
-        case rechenart = "mal":
+        case rechenart = "*":
             ausgabe (multiplikation(a,b));
             break;
 
-        case rechenart = "geteilt":
+        case rechenart = "/":
             ausgabe (division(a,b));
             break; 
 
@@ -65,7 +68,7 @@ function multiplikation(a,b) {
 //Division
 function division(a,b) {
     switch (b) {
-        case b=0:
+        case b==0:
             return ("Durch Null darf nicht geteilt werden!!!");
             break;
         default:
@@ -77,5 +80,5 @@ function division(a,b) {
 //Modul 4: Konsolenausgabe
 
 function ausgabe(outputStr) {
-    console.log(outputStr);
+    console.log("Das Ergebnis ist:",outputStr);
 }
