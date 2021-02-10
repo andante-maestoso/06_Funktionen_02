@@ -13,9 +13,13 @@ let a,b,c, rechenart
 // rechenart = "mal"
  
 //Modul 1: Eingabe und Überprüfung
-a = parseInt(prompt("Bitte die erste Zahl eingeben:"))
-b = parseInt(prompt("Bitte die zweite Zahl eingeben:"))
-rechenart = prompt("Bitte Rechenart eingeben (plus/minus/mal/geteilt)")
+
+    
+    a = parseInt(prompt("Bitte die erste Zahl eingeben:"))
+    b = parseInt(prompt("Bitte die zweite Zahl eingeben:"))
+    rechenart = prompt("Bitte Rechenart eingeben (plus/minus/mal/geteilt)")
+
+
 
 //Modul 2: Auswahl Rechenart 
 //function auswahl(rechenart, a, b){
@@ -60,12 +64,18 @@ function multiplikation(a,b) {
 
 //Division
 function division(a,b) {
-    return a / b;
+    switch (b) {
+        case b=0:
+            return ("Durch Null darf nicht geteilt werden!!!");
+            break;
+        default:
+            return a / b;
+            break;
+    }
 }
 
-//Modul 4: Konsolenausgabe | Test:
-//ausgabe ("hi");
-//ausgabe (division(a,b));
+//Modul 4: Konsolenausgabe
+
 function ausgabe(outputStr) {
     console.log(outputStr);
 }
