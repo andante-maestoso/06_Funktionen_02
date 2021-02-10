@@ -8,12 +8,14 @@
 4. Ausgabe in Konsole :: check
 */
 let a,b,c, rechenart
-a=6
-b=2
-rechenart = "mal"
+// a=6
+// b=2
+// rechenart = "mal"
  
 //Modul 1: Eingabe und Überprüfung
-
+a = parseInt(prompt("Bitte die erste Zahl eingeben:"))
+b = parseInt(prompt("Bitte die zweite Zahl eingeben:"))
+rechenart = prompt("Bitte Rechenart eingeben (plus/minus/mal/geteilt)")
 
 //Modul 2: Auswahl Rechenart 
 //function auswahl(rechenart, a, b){
