@@ -13,7 +13,7 @@
 let a, b, c, rechenart
 
 
-eingabe(a,b,rechenart)
+eingabe(a,b,rechenart);
 auswahl(a,b,rechenart);
 
 //Modul 1: Eingabe und Überprüfung
