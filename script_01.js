@@ -13,21 +13,19 @@
 let a, b, c, rechenart;
 
 
-eingabe(a,b,rechenart);
-ausgabe(auswahl(a,b,rechenart));
+eingabe(a,rechenart,b);
+ausgabe(auswahl(a,rechenart,b));
 
 //Modul 1: Eingabe und Überprüfung
     function eingabe (){
         
         a = parseInt(prompt("Bitte die erste Zahl eingeben:"));
         rechenart = prompt("Bitte Rechenart eingeben (+  -  *  /)");
-        b = parseInt(prompt("Bitte die zweite Zahl eingeben:"));
-        
-        
-        return a,b, rechenart;
+        b = parseInt(prompt("Bitte die zweite Zahl eingeben:"));     
+        return a,rechenart,b;
     }
 //Modul 2: Auswahl Rechenart 
-    function auswahl(a, b, rechenart){
+    function auswahl(a,rechenart,b){
         
         switch (rechenart) {
             case "+":
