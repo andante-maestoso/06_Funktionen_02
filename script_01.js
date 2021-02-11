@@ -10,7 +10,7 @@
 
 
 
-let a, b, c, rechenart
+let a, b, c, rechenart;
 
 
 eingabe(a,b,rechenart);
@@ -20,8 +20,9 @@ auswahl(a,b,rechenart);
     function eingabe (){
         
         a = parseInt(prompt("Bitte die erste Zahl eingeben:"));
-        b = parseInt(prompt("Bitte die zweite Zahl eingeben:"));
         rechenart = prompt("Bitte Rechenart eingeben (+  -  *  /)");
+        b = parseInt(prompt("Bitte die zweite Zahl eingeben:"));
+        
         
         return a,b, rechenart;
     }
@@ -79,5 +80,9 @@ auswahl(a,b,rechenart);
 
 //Modul 4: Konsolenausgabe
     function ausgabe(outputStr) {
+        if (b==0) {
+            console.log(outputStr); 
+        } else {
         console.log("Das Ergebnis ist:",outputStr);
+        }
 }
