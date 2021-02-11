@@ -11,74 +11,73 @@
 
 
 let a, b, c, rechenart
-// a=6
-// b=2
-// rechenart = "mal"
- 
+
+
+eingabe(a,b,rechenart)
+auswahl(a,b,rechenart);
+
 //Modul 1: Eingabe und Überprüfung
-
-    
-    a = parseInt(prompt("Bitte die erste Zahl eingeben:"))
-    b = parseInt(prompt("Bitte die zweite Zahl eingeben:"))
-    rechenart = prompt("Bitte Rechenart eingeben (+  -  *  /)")
-
-
-
-//Modul 2: Auswahl Rechenart 
-//function auswahl(rechenart, a, b){
-    switch (rechenart) {
-        case rechenart = "+":
-            ausgabe (addition(a,b));
-            break;
-
-        case rechenart = "-":
-            ausgabe (subtraktion(a,b));
-            break;
-
-        case rechenart = "*":
-            ausgabe (multiplikation(a,b));
-            break;
-
-        case rechenart = "/":
-            ausgabe (division(a,b));
-            break; 
-
-        default:
-            console.log("Keine gültige Rechenart!")
-            break;
+    function eingabe (){
+        
+        a = parseInt(prompt("Bitte die erste Zahl eingeben:"));
+        b = parseInt(prompt("Bitte die zweite Zahl eingeben:"));
+        rechenart = prompt("Bitte Rechenart eingeben (+  -  *  /)");
+        
+        return a,b, rechenart;
     }
-//}
+//Modul 2: Auswahl Rechenart 
+    function auswahl(a, b, rechenart){
+        
+        switch (rechenart) {
+            case rechenart = "+":
+                ausgabe (addition(a,b));
+                break;
+
+            case rechenart = "-":
+                ausgabe (subtraktion(a,b));
+                break;
+
+            case rechenart = "*":
+                ausgabe (multiplikation(a,b));
+                break;
+
+            case rechenart = "/":
+                ausgabe (division(a,b));
+                break; 
+
+            default:
+                console.log("Keine gültige Rechenart!")
+                break;
+        }
+    }
 //Modul 3: Grundrechenarten
 
-//Addition
-function addition(a,b) {
-    return a + b;
-}
-
-//Subtraktion
-function subtraktion(a,b) {
-    return a - b;
-}
-
-//Multiplikation
-function multiplikation(a,b) {
-    return a * b;
-}
-
-//Division
-function division(a,b) {
-    switch (b) {
-        case b==0:
-            return ("Durch Null darf nicht geteilt werden!!!");
-            break;
-        default:
-            return a / b;
-            break;
+    //Addition
+    function addition(a,b) {
+        return a + b;
     }
-}
+
+    //Subtraktion
+    function subtraktion(a,b) {
+        return a - b;
+    }
+
+    //Multiplikation
+    function multiplikation(a,b) {
+        return a * b;
+    }
+
+    //Division
+    function division(a,b) {
+        
+        if (b==0) {
+            return ("Durch Null darf nicht geteilt werden!!!"); 
+        } else {
+            return a / b; 
+        } 
+    }
 
 //Modul 4: Konsolenausgabe
-
-function ausgabe(outputStr) {
-    console.log("Das Ergebnis ist:",outputStr);
+    function ausgabe(outputStr) {
+        console.log("Das Ergebnis ist:",outputStr);
 }
