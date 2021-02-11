@@ -14,7 +14,7 @@ let a, b, c, rechenart;
 
 
 eingabe(a,b,rechenart);
-auswahl(a,b,rechenart);
+ausgabe(auswahl(a,b,rechenart));
 
 //Modul 1: Eingabe und Überprüfung
     function eingabe (){
@@ -30,20 +30,20 @@ auswahl(a,b,rechenart);
     function auswahl(a, b, rechenart){
         
         switch (rechenart) {
-            case rechenart = "+":
-                ausgabe (addition(a,b));
+            case "+":
+                return addition(a,b);
                 break;
 
-            case rechenart = "-":
-                ausgabe (subtraktion(a,b));
+            case "-":
+                return subtraktion(a,b);
                 break;
 
-            case rechenart = "*":
-                ausgabe (multiplikation(a,b));
+            case "*":
+                return multiplikation(a,b);
                 break;
 
-            case rechenart = "/":
-                ausgabe (division(a,b));
+            case "/":
+                return division(a,b);
                 break; 
 
             default:
